@@ -1,0 +1,37 @@
+
+<div class="form-container">
+  <h2>Ticket Systerm</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="totalTicket">Total Tickets</label>
+      <input id="totalTicket" type="number" [(ngModel)]="formData.totalTicket" name="totalTicket" />
+    </div>
+    <div>
+      <label for="ticketRetrivalTime">Ticket Retrieval Time</label>
+      <input id="ticketRetrivalTime" type="number" [(ngModel)]="formData.ticketRetrivalTime" name="ticketRetrivalTime" />
+    </div>
+    <div>
+      <label for="customerRetrivalTime">Customer Retrieval Time</label>
+      <input id="customerRetrivalTime" type="number" [(ngModel)]="formData.customerRetrivalTime" name="customerRetrivalTime" />
+    </div>
+    <div>
+      <label for="maxTicketCapacity">Max Ticket Capacity</label>
+      <input id="maxTicketCapacity" type="number" [(ngModel)]="formData.maxTicketCapacity" name="maxTicketCapacity" />
+    </div>
+    <div>
+      <label for="customerCount">Customer Count</label>
+      <input id="customerCount" type="number" [(ngModel)]="formData.customerCount" name="customerCount" />
+    </div>
+    <div>
+      <label for="vendorCount">Vendor Count</label>
+      <input id="vendorCount" type="number" [(ngModel)]="formData.vendorCount" name="vendorCount" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+    <div>
+      <button type="button" (click)="onClear()">Stop</button>
+      <button type="button" (click)="onSave()">Save</button>
+      <button type="button" (click)="onReset()">Reset</button>
+    </div>
+  
+</div>

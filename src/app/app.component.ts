@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormPageComponent } from './form-page/form-page.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http'; // Import the standalone form component beacuse this is Angular 18 project
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,  // Mark root as standalone
+  imports: [FormPageComponent,HttpClientModule],  // Import your form component , connecting method with backend
+  template: `<app-form-page></app-form-page>`,  // Use the form component in the template and nvigate form html file
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-api-form';
+    constructor(private http: HttpClient) {
+        // HttpClient is now available for use
+      }
 }
